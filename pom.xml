@@ -23,17 +23,7 @@
         <testcontainers.version>1.17.3</testcontainers.version>
         <spring-cloud-aws.version>2.4.1</spring-cloud-aws.version>
     </properties>
-    <!--    <dependencyManagement>-->
-    <!--        <dependencies>-->
-    <!--            <dependency>-->
-    <!--                <groupId>software.amazon.awssdk</groupId>-->
-    <!--                <artifactId>bom</artifactId>-->
-    <!--                <version>2.17.230</version>-->
-    <!--                <type>pom</type>-->
-    <!--                <scope>import</scope>-->
-    <!--            </dependency>-->
-    <!--        </dependencies>-->
-    <!--    </dependencyManagement>-->
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -53,14 +43,6 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-core</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--            <artifactId>jackson-databind</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-aws</artifactId>
@@ -75,18 +57,6 @@
             <groupId>org.awaitility</groupId>
             <artifactId>awaitility</artifactId>
             <version>4.2.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>1.17.3</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.testcontainers</groupId>
-            <artifactId>localstack</artifactId>
-            <version>1.17.3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
