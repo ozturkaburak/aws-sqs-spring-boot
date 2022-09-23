@@ -1,0 +1,27 @@
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: eu-west-1
+    credentials:
+      access-key: 123456
+      secret-key: zyzabc
+    end-point:
+      uri: http://localhost:4566/000000000000/sample-queue
+
+app:
+  queue-name: /sample-queue
+  uri-with-queue-name: ${cloud.aws.end-point.uri}
+  pooling-wait-time-out: 1
+
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.context.ContextInstanceDataAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
+
+
+

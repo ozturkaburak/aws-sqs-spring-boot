@@ -1,0 +1,24 @@
+cloud:
+  aws:
+    stack:
+      auto: false
+    region:
+      static: eu-west-1
+    credentials:
+      access-key: CHANGE_WITH_REAL_KEY
+      secret-key: CHANGE_WITH_REAL_SECRET
+    end-point:
+      uri: CHANGE_WITH_REAL_URI
+app:
+  queue-name: /simple-test
+  uri-with-queue-name: ${cloud.aws.end-point.uri}
+  pooling-wait-time-out: 10
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.context.ContextInstanceDataAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
+
+
+
